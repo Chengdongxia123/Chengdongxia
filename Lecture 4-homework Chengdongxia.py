@@ -7,7 +7,7 @@ result = df.groupby(["Major"]).sum().sort_values(["Unemployment_rate"])
 print(result)
 
 import pandas as pd
-df = pd.read_csv('recent-grads.csv')
+df = pd.read_csv('Chengdongxia/recent-grads.csv')
 df
 
 # 按照专业分组，将女生占比从高到低降序排列
