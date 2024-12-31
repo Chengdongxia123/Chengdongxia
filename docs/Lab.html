@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lab – Cheng Dongxia’s Data Analysis Portfolio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Cheng Dongxia’s Data Analysis Portfolio</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="./Practice1-2.html">
+ <span class="dropdown-text">Practice1-2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Practice3-4.html">
+ <span class="dropdown-text">Practice3-4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Lecture234.html">
+ <span class="dropdown-text">Lecture234</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Lecture5.html">
+ <span class="dropdown-text">Lecture5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Lab.html">
+ <span class="dropdown-text">Lab</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#getting-knowing-your-data---chipotle" id="toc-getting-knowing-your-data---chipotle" class="nav-link active" data-scroll-target="#getting-knowing-your-data---chipotle">01 - Getting &amp; Knowing Your Data - Chipotle</a></li>
+  <li><a href="#getting-knowing-your-data---occupation" id="toc-getting-knowing-your-data---occupation" class="nav-link" data-scroll-target="#getting-knowing-your-data---occupation">01 - Getting &amp; Knowing Your Data - Occupation</a></li>
+  <li><a href="#filtering-sorting-chipotle" id="toc-filtering-sorting-chipotle" class="nav-link" data-scroll-target="#filtering-sorting-chipotle">02 - Filtering &amp; Sorting: Chipotle</a></li>
+  <li><a href="#filtering-sorting-euro12" id="toc-filtering-sorting-euro12" class="nav-link" data-scroll-target="#filtering-sorting-euro12">02 - Filtering &amp; Sorting: Euro12</a></li>
+  <li><a href="#visualization-chipotle" id="toc-visualization-chipotle" class="nav-link" data-scroll-target="#visualization-chipotle">03 - Visualization: Chipotle</a></li>
+  <li><a href="#visualization-scores" id="toc-visualization-scores" class="nav-link" data-scroll-target="#visualization-scores">03 - Visualization: Scores</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="getting-knowing-your-data---chipotle" class="level2">
+<h2 class="anchored" data-anchor-id="getting-knowing-your-data---chipotle">01 - Getting &amp; Knowing Your Data - Chipotle</h2>
+<p>The following Python code demonstrates how to explore and analyze the Chipotle dataset to extract meaningful insights.</p>
+<div id="0ebc7444" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Import the necessary libraries</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Import the dataset from the URL</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Assign it to a variable called chipo</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>chipo <span class="op">=</span> pd.read_csv(url, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: See the first 10 entries</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"First 10 entries:"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chipo.head(<span class="dv">10</span>))</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: What is the number of observations in the dataset?</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of observations:"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chipo.shape[<span class="dv">0</span>])</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: What is the number of columns in the dataset?</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of columns:"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chipo.shape[<span class="dv">1</span>])</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Print the name of all the columns</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Column names:"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chipo.columns)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 8: How is the dataset indexed?</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Dataset index:"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chipo.index)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 9: Which was the most-ordered item?</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>most_ordered_item <span class="op">=</span> chipo.groupby(<span class="st">'item_name'</span>).<span class="bu">sum</span>().sort_values(<span class="st">'quantity'</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">1</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Most ordered item:"</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(most_ordered_item)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 10: For the most-ordered item, how many items were ordered?</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of most ordered items:"</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(most_ordered_item[<span class="st">'quantity'</span>].values[<span class="dv">0</span>])</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 11: What was the most ordered item in the choice_description column?</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>most_ordered_choice <span class="op">=</span> chipo[<span class="st">'choice_description'</span>].value_counts().idxmax()</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Most ordered choice description:"</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(most_ordered_choice)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 12: How many items were ordered in total?</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>total_items_ordered <span class="op">=</span> chipo[<span class="st">'quantity'</span>].<span class="bu">sum</span>()</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Total items ordered:"</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(total_items_ordered)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 13: Turn the item price into a float</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 13.a: Check the item price type</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Item price type before conversion:"</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chipo[<span class="st">'item_price'</span>].dtype)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 13.b: Create a lambda function and change the type of item price</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>chipo[<span class="st">'item_price'</span>] <span class="op">=</span> chipo[<span class="st">'item_price'</span>].<span class="bu">str</span>.replace(<span class="st">'$'</span>, <span class="st">''</span>).astype(<span class="bu">float</span>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 13.c: Check the item price type</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Item price type after conversion:"</span>)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chipo[<span class="st">'item_price'</span>].dtype)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 14: How much was the revenue for the period in the dataset?</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>revenue <span class="op">=</span> (chipo[<span class="st">'quantity'</span>] <span class="op">*</span> chipo[<span class="st">'item_price'</span>]).<span class="bu">sum</span>()</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Total revenue:"</span>)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(revenue)</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 15: How many orders were made in the period?</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>unique_orders <span class="op">=</span> chipo[<span class="st">'order_id'</span>].nunique()</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Total orders:"</span>)</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_orders)</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 16: What is the average revenue amount per order?</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>average_revenue_per_order <span class="op">=</span> revenue <span class="op">/</span> unique_orders</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Average revenue per order:"</span>)</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(average_revenue_per_order)</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 17: How many different items are sold?</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>unique_items <span class="op">=</span> chipo[<span class="st">'item_name'</span>].nunique()</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of unique items sold:"</span>)</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_items)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>First 10 entries:
+   order_id  quantity                              item_name  \
+0         1         1           Chips and Fresh Tomato Salsa   
+1         1         1                                   Izze   
+2         1         1                       Nantucket Nectar   
+3         1         1  Chips and Tomatillo-Green Chili Salsa   
+4         2         2                           Chicken Bowl   
+5         3         1                           Chicken Bowl   
+6         3         1                          Side of Chips   
+7         4         1                          Steak Burrito   
+8         4         1                       Steak Soft Tacos   
+9         5         1                          Steak Burrito   
+
+                                  choice_description item_price  
+0                                                NaN     $2.39   
+1                                       [Clementine]     $3.39   
+2                                            [Apple]     $3.39   
+3                                                NaN     $2.39   
+4  [Tomatillo-Red Chili Salsa (Hot), [Black Beans...    $16.98   
+5  [Fresh Tomato Salsa (Mild), [Rice, Cheese, Sou...    $10.98   
+6                                                NaN     $1.69   
+7  [Tomatillo Red Chili Salsa, [Fajita Vegetables...    $11.75   
+8  [Tomatillo Green Chili Salsa, [Pinto Beans, Ch...     $9.25   
+9  [Fresh Tomato Salsa, [Rice, Black Beans, Pinto...     $9.25   
+
+Number of observations:
+4622
+
+Number of columns:
+5
+
+Column names:
+Index(['order_id', 'quantity', 'item_name', 'choice_description',
+       'item_price'],
+      dtype='object')
+
+Dataset index:
+RangeIndex(start=0, stop=4622, step=1)
+
+Most ordered item:
+              order_id  quantity  \
+item_name                          
+Chicken Bowl    713926       761   
+
+                                             choice_description  \
+item_name                                                         
+Chicken Bowl  [Tomatillo-Red Chili Salsa (Hot), [Black Beans...   
+
+                                                     item_price  
+item_name                                                        
+Chicken Bowl  $16.98 $10.98 $11.25 $8.75 $8.49 $11.25 $8.75 ...  
+
+Number of most ordered items:
+761
+
+Most ordered choice description:
+[Diet Coke]
+
+Total items ordered:
+4972
+
+Item price type before conversion:
+object
+
+Item price type after conversion:
+float64
+
+Total revenue:
+39237.02
+
+Total orders:
+1834
+
+Average revenue per order:
+21.39423118865867
+
+Number of unique items sold:
+50</code></pre>
+</div>
+</div>
+</section>
+<section id="getting-knowing-your-data---occupation" class="level2">
+<h2 class="anchored" data-anchor-id="getting-knowing-your-data---occupation">01 - Getting &amp; Knowing Your Data - Occupation</h2>
+<p>The following Python code demonstrates how to explore and analyze a dataset of users and their occupations.</p>
+<div id="131526e9" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Import the necessary libraries</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Import the dataset from the URL</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Assign it to a variable called users and use the 'user_id' as index</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>users <span class="op">=</span> pd.read_csv(url, sep<span class="op">=</span><span class="st">'|'</span>, index_col<span class="op">=</span><span class="st">'user_id'</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: See the first 25 entries</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"First 25 entries:"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.head(<span class="dv">25</span>))</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: See the last 10 entries</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Last 10 entries:"</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.tail(<span class="dv">10</span>))</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: What is the number of observations in the dataset?</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of observations:"</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.shape[<span class="dv">0</span>])</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: What is the number of columns in the dataset?</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of columns:"</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.shape[<span class="dv">1</span>])</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 8: Print the name of all the columns</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Column names:"</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.columns)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 9: How is the dataset indexed?</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Dataset index:"</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.index)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 10: What is the data type of each column?</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Data types of each column:"</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.dtypes)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 11: Print only the occupation column</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Occupation column:"</span>)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users[<span class="st">'occupation'</span>])</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 12: How many different occupations are in this dataset?</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>unique_occupations <span class="op">=</span> users[<span class="st">'occupation'</span>].nunique()</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of unique occupations:"</span>)</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_occupations)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 13: What is the most frequent occupation?</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>most_frequent_occupation <span class="op">=</span> users[<span class="st">'occupation'</span>].value_counts().idxmax()</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Most frequent occupation:"</span>)</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(most_frequent_occupation)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 14: Summarize the DataFrame</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">DataFrame summary:"</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.info())</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 15: Summarize all the columns</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">DataFrame description:"</span>)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users.describe(include<span class="op">=</span><span class="st">'all'</span>))</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 16: Summarize only the occupation column</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Occupation column description:"</span>)</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(users[<span class="st">'occupation'</span>].describe())</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 17: What is the mean age of users?</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>mean_age <span class="op">=</span> users[<span class="st">'age'</span>].mean()</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Mean age of users:"</span>)</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mean_age)</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 18: What is the age with least occurrence?</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>age_least_occurrence <span class="op">=</span> users[<span class="st">'age'</span>].value_counts().idxmin()</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Age with least occurrence:"</span>)</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age_least_occurrence)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>First 25 entries:
+         age gender     occupation zip_code
+user_id                                    
+1         24      M     technician    85711
+2         53      F          other    94043
+3         23      M         writer    32067
+4         24      M     technician    43537
+5         33      F          other    15213
+6         42      M      executive    98101
+7         57      M  administrator    91344
+8         36      M  administrator    05201
+9         29      M        student    01002
+10        53      M         lawyer    90703
+11        39      F          other    30329
+12        28      F          other    06405
+13        47      M       educator    29206
+14        45      M      scientist    55106
+15        49      F       educator    97301
+16        21      M  entertainment    10309
+17        30      M     programmer    06355
+18        35      F          other    37212
+19        40      M      librarian    02138
+20        42      F      homemaker    95660
+21        26      M         writer    30068
+22        25      M         writer    40206
+23        30      F         artist    48197
+24        21      F         artist    94533
+25        39      M       engineer    55107
+
+Last 10 entries:
+         age gender     occupation zip_code
+user_id                                    
+934       61      M       engineer    22902
+935       42      M         doctor    66221
+936       24      M          other    32789
+937       48      M       educator    98072
+938       38      F     technician    55038
+939       26      F        student    33319
+940       32      M  administrator    02215
+941       20      M        student    97229
+942       48      F      librarian    78209
+943       22      M        student    77841
+
+Number of observations:
+943
+
+Number of columns:
+4
+
+Column names:
+Index(['age', 'gender', 'occupation', 'zip_code'], dtype='object')
+
+Dataset index:
+Index([  1,   2,   3,   4,   5,   6,   7,   8,   9,  10,
+       ...
+       934, 935, 936, 937, 938, 939, 940, 941, 942, 943],
+      dtype='int64', name='user_id', length=943)
+
+Data types of each column:
+age            int64
+gender        object
+occupation    object
+zip_code      object
+dtype: object
+
+Occupation column:
+user_id
+1         technician
+2              other
+3             writer
+4         technician
+5              other
+           ...      
+939          student
+940    administrator
+941          student
+942        librarian
+943          student
+Name: occupation, Length: 943, dtype: object
+
+Number of unique occupations:
+21
+
+Most frequent occupation:
+student
+
+DataFrame summary:
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+Index: 943 entries, 1 to 943
+Data columns (total 4 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   age         943 non-null    int64 
+ 1   gender      943 non-null    object
+ 2   occupation  943 non-null    object
+ 3   zip_code    943 non-null    object
+dtypes: int64(1), object(3)
+memory usage: 36.8+ KB
+None
+
+DataFrame description:
+               age gender occupation zip_code
+count   943.000000    943        943      943
+unique         NaN      2         21      795
+top            NaN      M    student    55414
+freq           NaN    670        196        9
+mean     34.051962    NaN        NaN      NaN
+std      12.192740    NaN        NaN      NaN
+min       7.000000    NaN        NaN      NaN
+25%      25.000000    NaN        NaN      NaN
+50%      31.000000    NaN        NaN      NaN
+75%      43.000000    NaN        NaN      NaN
+max      73.000000    NaN        NaN      NaN
+
+Occupation column description:
+count         943
+unique         21
+top       student
+freq          196
+Name: occupation, dtype: object
+
+Mean age of users:
+34.05196182396607
+
+Age with least occurrence:
+7</code></pre>
+</div>
+</div>
+</section>
+<section id="filtering-sorting-chipotle" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-sorting-chipotle">02 - Filtering &amp; Sorting: Chipotle</h2>
+<p>The following Python code demonstrates how to filter and sort the Chipotle dataset to extract meaningful insights.</p>
+<div id="d8a0fd20" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Import the necessary libraries</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Import the dataset from the URL</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Assign it to a variable called chipo</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>chipo <span class="op">=</span> pd.read_csv(url, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: How many products cost more than $10.00?</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>chipo[<span class="st">'item_price'</span>] <span class="op">=</span> chipo[<span class="st">'item_price'</span>].<span class="bu">str</span>.replace(<span class="st">'$'</span>, <span class="st">''</span>).astype(<span class="bu">float</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>products_over_10 <span class="op">=</span> chipo[chipo[<span class="st">'item_price'</span>] <span class="op">&gt;</span> <span class="dv">10</span>][<span class="st">'item_name'</span>].nunique()</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of products costing more than $10.00:"</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(products_over_10)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: What is the price of each item? Create a DataFrame with only item_name and item_price</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>item_prices <span class="op">=</span> chipo[[<span class="st">'item_name'</span>, <span class="st">'item_price'</span>]].drop_duplicates()</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Prices of each item:"</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(item_prices)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Sort by the name of the item</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>sorted_items <span class="op">=</span> chipo.sort_values(<span class="st">'item_name'</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Items sorted by name:"</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sorted_items[[<span class="st">'item_name'</span>, <span class="st">'item_price'</span>]].drop_duplicates())</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: What was the quantity of the most expensive item ordered?</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>most_expensive_item <span class="op">=</span> chipo.sort_values(<span class="st">'item_price'</span>, ascending<span class="op">=</span><span class="va">False</span>).iloc[<span class="dv">0</span>]</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>quantity_of_most_expensive <span class="op">=</span> most_expensive_item[<span class="st">'quantity'</span>]</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Quantity of the most expensive item ordered:"</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(quantity_of_most_expensive)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 8: How many times was a Veggie Salad Bowl ordered?</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>veggie_salad_bowl_orders <span class="op">=</span> chipo[chipo[<span class="st">'item_name'</span>] <span class="op">==</span> <span class="st">'Veggie Salad Bowl'</span>][<span class="st">'quantity'</span>].<span class="bu">sum</span>()</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of times Veggie Salad Bowl was ordered:"</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(veggie_salad_bowl_orders)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 9: How many times did someone order more than one Canned Soda?</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>canned_soda_orders <span class="op">=</span> chipo[(chipo[<span class="st">'item_name'</span>] <span class="op">==</span> <span class="st">'Canned Soda'</span>) <span class="op">&amp;</span> (chipo[<span class="st">'quantity'</span>] <span class="op">&gt;</span> <span class="dv">1</span>)].shape[<span class="dv">0</span>]</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of times more than one Canned Soda was ordered:"</span>)</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(canned_soda_orders)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of products costing more than $10.00:
+31
+
+Prices of each item:
+                                  item_name  item_price
+0              Chips and Fresh Tomato Salsa        2.39
+1                                      Izze        3.39
+2                          Nantucket Nectar        3.39
+3     Chips and Tomatillo-Green Chili Salsa        2.39
+4                              Chicken Bowl       16.98
+...                                     ...         ...
+4237                    Chips and Guacamole        8.50
+4354                       Steak Soft Tacos       18.50
+4489                    Chips and Guacamole       17.80
+4509                                  Chips        1.99
+4510                          Barbacoa Bowl       11.49
+
+[209 rows x 2 columns]
+
+Items sorted by name:
+              item_name  item_price
+3389  6 Pack Soft Drink       12.98
+341   6 Pack Soft Drink        6.49
+418       Barbacoa Bowl        9.25
+4485      Barbacoa Bowl       11.75
+1383      Barbacoa Bowl       11.48
+...                 ...         ...
+2223  Veggie Salad Bowl        8.75
+738   Veggie Soft Tacos       11.25
+3889  Veggie Soft Tacos       16.98
+2384  Veggie Soft Tacos        8.75
+2851  Veggie Soft Tacos        8.49
+
+[209 rows x 2 columns]
+
+Quantity of the most expensive item ordered:
+15
+
+Number of times Veggie Salad Bowl was ordered:
+18
+
+Number of times more than one Canned Soda was ordered:
+20</code></pre>
+</div>
+</div>
+</section>
+<section id="filtering-sorting-euro12" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-sorting-euro12">02 - Filtering &amp; Sorting: Euro12</h2>
+<p>The following Python code demonstrates how to filter and sort the Euro2012 dataset to extract meaningful insights.</p>
+<div id="e4b9cf53" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Import the necessary libraries</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Import the dataset from the URL</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/guipsamora/pandas_exercises/master/02_Filtering_%26_Sorting/Euro12/Euro_2012_stats_TEAM.csv"</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Assign it to a variable called euro12</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>euro12 <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Select only the Goal column</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>goals <span class="op">=</span> euro12[<span class="st">'Goals'</span>]</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Goals column:"</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(goals)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: How many teams participated in the Euro2012?</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>num_teams <span class="op">=</span> euro12[<span class="st">'Team'</span>].nunique()</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of teams that participated:"</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(num_teams)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: What is the number of columns in the dataset?</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>num_columns <span class="op">=</span> euro12.shape[<span class="dv">1</span>]</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Number of columns in the dataset:"</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(num_columns)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: View only the columns Team, Yellow Cards, and Red Cards and assign them to a dataframe called discipline</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>discipline <span class="op">=</span> euro12[[<span class="st">'Team'</span>, <span class="st">'Yellow Cards'</span>, <span class="st">'Red Cards'</span>]]</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Discipline dataframe:"</span>)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(discipline)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 8: Sort the teams by Red Cards, then by Yellow Cards</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>sorted_teams <span class="op">=</span> discipline.sort_values(by<span class="op">=</span>[<span class="st">'Red Cards'</span>, <span class="st">'Yellow Cards'</span>], ascending<span class="op">=</span>[<span class="va">True</span>, <span class="va">True</span>])</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Teams sorted by Red and Yellow Cards:"</span>)</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sorted_teams)</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 9: Calculate the mean Yellow Cards given per Team</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>mean_yellow_cards <span class="op">=</span> discipline[<span class="st">'Yellow Cards'</span>].mean()</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Mean Yellow Cards per team:"</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mean_yellow_cards)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 10: Filter teams that scored more than 6 goals</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>teams_more_than_6_goals <span class="op">=</span> euro12[euro12[<span class="st">'Goals'</span>] <span class="op">&gt;</span> <span class="dv">6</span>]</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Teams that scored more than 6 goals:"</span>)</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(teams_more_than_6_goals[<span class="st">'Team'</span>])</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 11: Select the teams that start with G</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>g_teams <span class="op">=</span> euro12[euro12[<span class="st">'Team'</span>].<span class="bu">str</span>.startswith(<span class="st">'G'</span>)]</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Teams starting with 'G':"</span>)</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(g_teams[<span class="st">'Team'</span>])</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 12: Select the first 7 columns</span></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>first_7_columns <span class="op">=</span> euro12.iloc[:, :<span class="dv">7</span>]</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">First 7 columns:"</span>)</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(first_7_columns)</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 13: Select all columns except the last 3</span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>all_except_last_3 <span class="op">=</span> euro12.iloc[:, :<span class="op">-</span><span class="dv">3</span>]</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">All columns except the last 3:"</span>)</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(all_except_last_3)</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 14: Present only the Shooting Accuracy from England, Italy, and Russia</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>shooting_accuracy <span class="op">=</span> euro12[euro12[<span class="st">'Team'</span>].isin([<span class="st">'England'</span>, <span class="st">'Italy'</span>, <span class="st">'Russia'</span>])][[<span class="st">'Team'</span>, <span class="st">'Shooting Accuracy'</span>]]</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Shooting Accuracy of England, Italy, and Russia:"</span>)</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(shooting_accuracy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Goals column:
+0      4
+1      4
+2      4
+3      5
+4      3
+5     10
+6      5
+7      6
+8      2
+9      2
+10     6
+11     1
+12     5
+13    12
+14     5
+15     2
+Name: Goals, dtype: int64
+
+Number of teams that participated:
+16
+
+Number of columns in the dataset:
+35
+
+Discipline dataframe:
+                   Team  Yellow Cards  Red Cards
+0               Croatia             9          0
+1        Czech Republic             7          0
+2               Denmark             4          0
+3               England             5          0
+4                France             6          0
+5               Germany             4          0
+6                Greece             9          1
+7                 Italy            16          0
+8           Netherlands             5          0
+9                Poland             7          1
+10             Portugal            12          0
+11  Republic of Ireland             6          1
+12               Russia             6          0
+13                Spain            11          0
+14               Sweden             7          0
+15              Ukraine             5          0
+
+Teams sorted by Red and Yellow Cards:
+                   Team  Yellow Cards  Red Cards
+2               Denmark             4          0
+5               Germany             4          0
+3               England             5          0
+8           Netherlands             5          0
+15              Ukraine             5          0
+4                France             6          0
+12               Russia             6          0
+1        Czech Republic             7          0
+14               Sweden             7          0
+0               Croatia             9          0
+13                Spain            11          0
+10             Portugal            12          0
+7                 Italy            16          0
+11  Republic of Ireland             6          1
+9                Poland             7          1
+6                Greece             9          1
+
+Mean Yellow Cards per team:
+7.4375
+
+Teams that scored more than 6 goals:
+5     Germany
+13      Spain
+Name: Team, dtype: object
+
+Teams starting with 'G':
+5    Germany
+6     Greece
+Name: Team, dtype: object
+
+First 7 columns:
+                   Team  Goals  Shots on target  Shots off target  \
+0               Croatia      4               13                12   
+1        Czech Republic      4               13                18   
+2               Denmark      4               10                10   
+3               England      5               11                18   
+4                France      3               22                24   
+5               Germany     10               32                32   
+6                Greece      5                8                18   
+7                 Italy      6               34                45   
+8           Netherlands      2               12                36   
+9                Poland      2               15                23   
+10             Portugal      6               22                42   
+11  Republic of Ireland      1                7                12   
+12               Russia      5                9                31   
+13                Spain     12               42                33   
+14               Sweden      5               17                19   
+15              Ukraine      2                7                26   
+
+   Shooting Accuracy % Goals-to-shots  Total shots (inc. Blocked)  
+0              51.9%            16.0%                          32  
+1              41.9%            12.9%                          39  
+2              50.0%            20.0%                          27  
+3              50.0%            17.2%                          40  
+4              37.9%             6.5%                          65  
+5              47.8%            15.6%                          80  
+6              30.7%            19.2%                          32  
+7              43.0%             7.5%                         110  
+8              25.0%             4.1%                          60  
+9              39.4%             5.2%                          48  
+10             34.3%             9.3%                          82  
+11             36.8%             5.2%                          28  
+12             22.5%            12.5%                          59  
+13             55.9%            16.0%                         100  
+14             47.2%            13.8%                          39  
+15             21.2%             6.0%                          38  
+
+All columns except the last 3:
+                   Team  Goals  Shots on target  Shots off target  \
+0               Croatia      4               13                12   
+1        Czech Republic      4               13                18   
+2               Denmark      4               10                10   
+3               England      5               11                18   
+4                France      3               22                24   
+5               Germany     10               32                32   
+6                Greece      5                8                18   
+7                 Italy      6               34                45   
+8           Netherlands      2               12                36   
+9                Poland      2               15                23   
+10             Portugal      6               22                42   
+11  Republic of Ireland      1                7                12   
+12               Russia      5                9                31   
+13                Spain     12               42                33   
+14               Sweden      5               17                19   
+15              Ukraine      2                7                26   
+
+   Shooting Accuracy % Goals-to-shots  Total shots (inc. Blocked)  \
+0              51.9%            16.0%                          32   
+1              41.9%            12.9%                          39   
+2              50.0%            20.0%                          27   
+3              50.0%            17.2%                          40   
+4              37.9%             6.5%                          65   
+5              47.8%            15.6%                          80   
+6              30.7%            19.2%                          32   
+7              43.0%             7.5%                         110   
+8              25.0%             4.1%                          60   
+9              39.4%             5.2%                          48   
+10             34.3%             9.3%                          82   
+11             36.8%             5.2%                          28   
+12             22.5%            12.5%                          59   
+13             55.9%            16.0%                         100   
+14             47.2%            13.8%                          39   
+15             21.2%             6.0%                          38   
+
+    Hit Woodwork  Penalty goals  Penalties not scored  ...  Clean Sheets  \
+0              0              0                     0  ...             0   
+1              0              0                     0  ...             1   
+2              1              0                     0  ...             1   
+3              0              0                     0  ...             2   
+4              1              0                     0  ...             1   
+5              2              1                     0  ...             1   
+6              1              1                     1  ...             1   
+7              2              0                     0  ...             2   
+8              2              0                     0  ...             0   
+9              0              0                     0  ...             0   
+10             6              0                     0  ...             2   
+11             0              0                     0  ...             0   
+12             2              0                     0  ...             0   
+13             0              1                     0  ...             5   
+14             3              0                     0  ...             1   
+15             0              0                     0  ...             0   
+
+    Blocks  Goals conceded Saves made  Saves-to-shots ratio  Fouls Won  \
+0       10               3         13                 81.3%         41   
+1       10               6          9                 60.1%         53   
+2       10               5         10                 66.7%         25   
+3       29               3         22                 88.1%         43   
+4        7               5          6                 54.6%         36   
+5       11               6         10                 62.6%         63   
+6       23               7         13                 65.1%         67   
+7       18               7         20                 74.1%        101   
+8        9               5         12                 70.6%         35   
+9        8               3          6                 66.7%         48   
+10      11               4         10                 71.5%         73   
+11      23               9         17                 65.4%         43   
+12       8               3         10                 77.0%         34   
+13       8               1         15                 93.8%        102   
+14      12               5          8                 61.6%         35   
+15       4               4         13                 76.5%         48   
+
+    Fouls Conceded  Offsides  Yellow Cards  Red Cards  
+0               62         2             9          0  
+1               73         8             7          0  
+2               38         8             4          0  
+3               45         6             5          0  
+4               51         5             6          0  
+5               49        12             4          0  
+6               48        12             9          1  
+7               89        16            16          0  
+8               30         3             5          0  
+9               56         3             7          1  
+10              90        10            12          0  
+11              51        11             6          1  
+12              43         4             6          0  
+13              83        19            11          0  
+14              51         7             7          0  
+15              31         4             5          0  
+
+[16 rows x 32 columns]
+
+Shooting Accuracy of England, Italy, and Russia:
+       Team Shooting Accuracy
+3   England             50.0%
+7     Italy             43.0%
+12   Russia             22.5%</code></pre>
+</div>
+</div>
+</section>
+<section id="visualization-chipotle" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-chipotle">03 - Visualization: Chipotle</h2>
+<p>The following Python code demonstrates how to visualize insights from the Chipotle dataset using histograms and scatter plots.</p>
+<div id="a23b4dbe" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Import the necessary libraries</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Import the dataset from the URL</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv"</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Assign it to a variable called chipo</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>chipo <span class="op">=</span> pd.read_csv(url, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: See the first 10 entries</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"First 10 entries:"</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(chipo.head(<span class="dv">10</span>))</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Create a histogram of the top 5 items bought</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>top_5_items <span class="op">=</span> Counter(chipo[<span class="st">'item_name'</span>]).most_common(<span class="dv">5</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>items, counts <span class="op">=</span> <span class="bu">zip</span>(<span class="op">*</span>top_5_items)</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>plt.bar(items, counts)</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Top 5 Items Bought'</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Items'</span>)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Count'</span>)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 6: Create a scatterplot with the number of items ordered per order price</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint: Price should be in the X-axis and Items ordered in the Y-axis</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>chipo[<span class="st">'item_price'</span>] <span class="op">=</span> chipo[<span class="st">'item_price'</span>].<span class="bu">str</span>.replace(<span class="st">'$'</span>, <span class="st">''</span>).astype(<span class="bu">float</span>)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>chipo[<span class="st">'order_total'</span>] <span class="op">=</span> chipo[<span class="st">'quantity'</span>] <span class="op">*</span> chipo[<span class="st">'item_price'</span>]</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>order_summary <span class="op">=</span> chipo.groupby(<span class="st">'order_id'</span>).agg({<span class="st">'quantity'</span>: <span class="st">'sum'</span>, <span class="st">'order_total'</span>: <span class="st">'sum'</span>}).reset_index()</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>plt.scatter(order_summary[<span class="st">'order_total'</span>], order_summary[<span class="st">'quantity'</span>], alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Number of Items Ordered per Order Price'</span>)</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Order Total ($)'</span>)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Items Ordered'</span>)</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: BONUS: Create a question and a graph to answer your own question.</span></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Question: What is the distribution of order total prices?</span></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>plt.hist(order_summary[<span class="st">'order_total'</span>], bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'skyblue'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Order Total Prices'</span>)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Order Total ($)'</span>)</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>First 10 entries:
+   order_id  quantity                              item_name  \
+0         1         1           Chips and Fresh Tomato Salsa   
+1         1         1                                   Izze   
+2         1         1                       Nantucket Nectar   
+3         1         1  Chips and Tomatillo-Green Chili Salsa   
+4         2         2                           Chicken Bowl   
+5         3         1                           Chicken Bowl   
+6         3         1                          Side of Chips   
+7         4         1                          Steak Burrito   
+8         4         1                       Steak Soft Tacos   
+9         5         1                          Steak Burrito   
+
+                                  choice_description item_price  
+0                                                NaN     $2.39   
+1                                       [Clementine]     $3.39   
+2                                            [Apple]     $3.39   
+3                                                NaN     $2.39   
+4  [Tomatillo-Red Chili Salsa (Hot), [Black Beans...    $16.98   
+5  [Fresh Tomato Salsa (Mild), [Rice, Cheese, Sou...    $10.98   
+6                                                NaN     $1.69   
+7  [Tomatillo Red Chili Salsa, [Fajita Vegetables...    $11.75   
+8  [Tomatillo Green Chili Salsa, [Pinto Beans, Ch...     $9.25   
+9  [Fresh Tomato Salsa, [Rice, Black Beans, Pinto...     $9.25   </code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_files/figure-html/cell-6-output-2.png" width="667" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_files/figure-html/cell-6-output-3.png" width="659" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_files/figure-html/cell-6-output-4.png" width="676" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="visualization-scores" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-scores">03 - Visualization: Scores</h2>
+<p>The following Python code demonstrates how to create scatter plots and analyze the relationship between test scores and other variables.</p>
+<div id="50b047e0" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Import the necessary libraries</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Create the DataFrame</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'first_name'</span>: [<span class="st">'Jason'</span>, <span class="st">'Molly'</span>, <span class="st">'Tina'</span>, <span class="st">'Jake'</span>, <span class="st">'Amy'</span>],</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'last_name'</span>: [<span class="st">'Miller'</span>, <span class="st">'Jacobson'</span>, <span class="st">'Ali'</span>, <span class="st">'Milner'</span>, <span class="st">'Cooze'</span>],</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'age'</span>: [<span class="dv">42</span>, <span class="dv">52</span>, <span class="dv">36</span>, <span class="dv">24</span>, <span class="dv">73</span>],</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'female'</span>: [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>],</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'preTestScore'</span>: [<span class="dv">4</span>, <span class="dv">24</span>, <span class="dv">31</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'postTestScore'</span>: [<span class="dv">25</span>, <span class="dv">94</span>, <span class="dv">57</span>, <span class="dv">62</span>, <span class="dv">70</span>]</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DataFrame:"</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Create a Scatterplot of preTestScore and postTestScore, with the size of each point determined by age</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>plt.scatter(df[<span class="st">'preTestScore'</span>], df[<span class="st">'postTestScore'</span>], s<span class="op">=</span>df[<span class="st">'age'</span>]<span class="op">*</span><span class="dv">10</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatterplot of preTestScore vs. postTestScore'</span>)</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'preTestScore'</span>)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'postTestScore'</span>)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 4: Create a Scatterplot of preTestScore and postTestScore with size 4.5 times postTestScore and color by sex</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> df[<span class="st">'female'</span>].<span class="bu">map</span>({<span class="dv">0</span>: <span class="st">'blue'</span>, <span class="dv">1</span>: <span class="st">'pink'</span>})</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>plt.scatter(df[<span class="st">'preTestScore'</span>], df[<span class="st">'postTestScore'</span>], s<span class="op">=</span>df[<span class="st">'postTestScore'</span>]<span class="op">*</span><span class="fl">4.5</span>, c<span class="op">=</span>colors, alpha<span class="op">=</span><span class="fl">0.6</span>)</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatterplot of preTestScore vs. postTestScore by Gender'</span>)</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'preTestScore'</span>)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'postTestScore'</span>)</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="co"># BONUS: Create your own question and answer it</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>DataFrame:
+  first_name last_name  age  female  preTestScore  postTestScore
+0      Jason    Miller   42       0             4             25
+1      Molly  Jacobson   52       1            24             94
+2       Tina       Ali   36       1            31             57
+3       Jake    Milner   24       0             2             62
+4        Amy     Cooze   73       1             3             70</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_files/figure-html/cell-7-output-2.png" width="659" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lab_files/figure-html/cell-7-output-3.png" width="659" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

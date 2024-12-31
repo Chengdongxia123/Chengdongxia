@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lecture234 – Cheng Dongxia’s Data Analysis Portfolio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Cheng Dongxia’s Data Analysis Portfolio</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="./Practice1-2.html">
+ <span class="dropdown-text">Practice1-2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Practice3-4.html">
+ <span class="dropdown-text">Practice3-4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Lecture234.html">
+ <span class="dropdown-text">Lecture234</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Lecture5.html">
+ <span class="dropdown-text">Lecture5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Lab.html">
+ <span class="dropdown-text">Lab</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lecture234" id="toc-lecture234" class="nav-link active" data-scroll-target="#lecture234">Lecture234</a>
+  <ul class="collapse">
+  <li><a href="#lecture2---seattle-pet-licenses-analysis" id="toc-lecture2---seattle-pet-licenses-analysis" class="nav-link" data-scroll-target="#lecture2---seattle-pet-licenses-analysis">Lecture2 - Seattle Pet Licenses Analysis</a></li>
+  <li><a href="#lecture3---nobel-and-titanic-data-analysis" id="toc-lecture3---nobel-and-titanic-data-analysis" class="nav-link" data-scroll-target="#lecture3---nobel-and-titanic-data-analysis">Lecture3 - Nobel and Titanic Data Analysis</a></li>
+  <li><a href="#lecture4---employment-and-graduation-data-analysis" id="toc-lecture4---employment-and-graduation-data-analysis" class="nav-link" data-scroll-target="#lecture4---employment-and-graduation-data-analysis">Lecture4 - Employment and Graduation Data Analysis</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lecture234</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="lecture234" class="level1">
+<h1>Lecture234</h1>
+<section id="lecture2---seattle-pet-licenses-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="lecture2---seattle-pet-licenses-analysis">Lecture2 - Seattle Pet Licenses Analysis</h2>
+<p>The following Python code demonstrates how to analyze a dataset of Seattle pet licenses to extract various insights.</p>
+<div id="769c0927" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Seattle pet licenses data</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">'seattle_pet_licenses.csv'</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>seattle_pets_df <span class="op">=</span> pd.read_csv(file_path)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Task 1: Count the total number of pets</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>num_pets <span class="op">=</span> seattle_pets_df.shape[<span class="dv">0</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"1. Total number of pets in the dataset: </span><span class="sc">{</span>num_pets<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Task 2: Count the number of variables for each pet</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>num_variables <span class="op">=</span> seattle_pets_df.shape[<span class="dv">1</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"2. Number of variables (columns) per pet: </span><span class="sc">{</span>num_variables<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Task 3: Find the three most common pet names in Seattle</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>top_three_pet_names <span class="op">=</span> seattle_pets_df[<span class="st">'animal_s_name'</span>].value_counts().nlargest(<span class="dv">3</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"3. Three most common pet names in Seattle:"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, count <span class="kw">in</span> top_three_pet_names.items():</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"   - </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>count<span class="sc">}</span><span class="ss"> occurrences"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1. Total number of pets in the dataset: 66042
+2. Number of variables (columns) per pet: 7
+3. Three most common pet names in Seattle:
+   - Lucy: 566 occurrences
+   - Bella: 451 occurrences
+   - Charlie: 447 occurrences</code></pre>
+</div>
+</div>
+</section>
+<section id="lecture3---nobel-and-titanic-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="lecture3---nobel-and-titanic-data-analysis">Lecture3 - Nobel and Titanic Data Analysis</h2>
+<p>The following Python code demonstrates how to analyze Nobel laureates and Titanic passenger datasets, extracting meaningful insights.</p>
+<div id="5952e6c6" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Nobel dataset</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">'https://raw.githubusercontent.com/tidyverse/datascience-box/refs/heads/main/course-materials/lab-instructions/lab-03/data/nobel.csv'</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the Nobel dataset locally</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'nobel.csv'</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the saved Nobel dataset</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>file_path <span class="op">=</span> <span class="st">"nobel.csv"</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>nobel_df <span class="op">=</span> pd.read_csv(file_path)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Task 1: Get the number of observations and variables</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>num_observations, num_variables <span class="op">=</span> nobel_df.shape</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Number of observations: </span><span class="sc">{</span>num_observations<span class="sc">}</span><span class="ss">, Number of variables: </span><span class="sc">{</span>num_variables<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Each row represents an individual who has received a Nobel Prize. </span><span class="ch">\n</span><span class="st">"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"The row includes details such as their name, year of award, category, affiliation, country, </span><span class="ch">\n</span><span class="st">"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"birth and death dates, and motivation for the award."</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Task 2: Living Nobel laureates with known country and gender</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>nobel_living <span class="op">=</span> nobel_df[(nobel_df[<span class="st">'country'</span>].notna()) <span class="op">&amp;</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>                        (nobel_df[<span class="st">'gender'</span>] <span class="op">!=</span> <span class="st">'org'</span>) <span class="op">&amp;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>                        (nobel_df[<span class="st">'died_date'</span>].isna())]</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Living Nobel laureates shape: </span><span class="sc">{</span>nobel_living<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>nobel_living.head()</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Task 3: Most common country for Nobel laureates' affiliations</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>most_common_country <span class="op">=</span> nobel_df[<span class="st">'country'</span>].mode().iloc[<span class="dv">0</span>] <span class="cf">if</span> <span class="kw">not</span> nobel_df[<span class="st">'country'</span>].empty <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Most common country for affiliations: </span><span class="sc">{</span>most_common_country<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Titanic dataset analysis</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> skimpy <span class="im">import</span> skim</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>titanic_df <span class="op">=</span> pd.read_csv(<span class="st">"titanic.csv"</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Display summary with skimpy</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>skim(titanic_df)</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows to understand the structure</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>titanic_df.head()</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a concise summary of the DataFrame</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>titanic_df.info()</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Check for any missing values in each column</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>titanic_df.isnull().<span class="bu">sum</span>()</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics for numerical columns</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>titanic_df.describe()</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics for categorical columns</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>titanic_df.describe(include<span class="op">=</span><span class="st">"object"</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Count unique values in each categorical column</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(titanic_df[<span class="st">'Sex'</span>].value_counts())</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(titanic_df[<span class="st">'Embarked'</span>].value_counts())</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Survival rate by class</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(titanic_df.groupby(<span class="st">'Pclass'</span>)[<span class="st">'Survived'</span>].mean())</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="co"># Survival rate by sex</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(titanic_df.groupby(<span class="st">'Sex'</span>)[<span class="st">'Survived'</span>].mean())</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Percentage of missing values in each column</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>missing_percentage <span class="op">=</span> (titanic_df.isnull().mean() <span class="op">*</span> <span class="dv">100</span>).sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(missing_percentage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of observations: 935, Number of variables: 27
+Each row represents an individual who has received a Nobel Prize. 
+ The row includes details such as their name, year of award, category, affiliation, country, 
+ birth and death dates, and motivation for the award.
+Living Nobel laureates shape: (228, 27)
+Most common country for affiliations: USA</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭──────────────────────────────────────────────── skimpy summary ─────────────────────────────────────────────────╮
+│ <span style="font-style: italic">         Data Summary         </span> <span style="font-style: italic">      Data Types       </span>                                                          │
+│ ┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓ ┏━━━━━━━━━━━━━┳━━━━━━━┓                                                          │
+│ ┃<span style="color: #008080; text-decoration-color: #008080; font-weight: bold"> Dataframe         </span>┃<span style="color: #008080; text-decoration-color: #008080; font-weight: bold"> Values </span>┃ ┃<span style="color: #008080; text-decoration-color: #008080; font-weight: bold"> Column Type </span>┃<span style="color: #008080; text-decoration-color: #008080; font-weight: bold"> Count </span>┃                                                          │
+│ ┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩ ┡━━━━━━━━━━━━━╇━━━━━━━┩                                                          │
+│ │ Number of rows    │ 891    │ │ int64       │ 5     │                                                          │
+│ │ Number of columns │ 12     │ │ string      │ 5     │                                                          │
+│ └───────────────────┴────────┘ │ float64     │ 2     │                                                          │
+│                                └─────────────┴───────┘                                                          │
+│ <span style="font-style: italic">                                                    number                                                    </span>  │
+│ ┏━━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━┳━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━┳━━━━━━━━┓  │
+│ ┃<span style="font-weight: bold"> column       </span>┃<span style="font-weight: bold"> NA   </span>┃<span style="font-weight: bold"> NA %               </span>┃<span style="font-weight: bold"> mean   </span>┃<span style="font-weight: bold"> sd     </span>┃<span style="font-weight: bold"> p0   </span>┃<span style="font-weight: bold"> p25   </span>┃<span style="font-weight: bold"> p50   </span>┃<span style="font-weight: bold"> p75   </span>┃<span style="font-weight: bold"> p100  </span>┃<span style="font-weight: bold"> hist   </span>┃  │
+│ ┡━━━━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━╇━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━╇━━━━━━━━┩  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">PassengerId </span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">                 0</span> │ <span style="color: #008080; text-decoration-color: #008080">   446</span> │ <span style="color: #008080; text-decoration-color: #008080"> 257.4</span> │ <span style="color: #008080; text-decoration-color: #008080">   1</span> │ <span style="color: #008080; text-decoration-color: #008080">223.5</span> │ <span style="color: #008080; text-decoration-color: #008080">  446</span> │ <span style="color: #008080; text-decoration-color: #008080">668.5</span> │ <span style="color: #008080; text-decoration-color: #008080">  891</span> │ <span style="color: #008000; text-decoration-color: #008000">▇▇▇▇▇▇</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Survived    </span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">                 0</span> │ <span style="color: #008080; text-decoration-color: #008080">0.3838</span> │ <span style="color: #008080; text-decoration-color: #008080">0.4866</span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">    0</span> │ <span style="color: #008080; text-decoration-color: #008080">    0</span> │ <span style="color: #008080; text-decoration-color: #008080">    1</span> │ <span style="color: #008080; text-decoration-color: #008080">    1</span> │ <span style="color: #008000; text-decoration-color: #008000">▇    ▅</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Pclass      </span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">                 0</span> │ <span style="color: #008080; text-decoration-color: #008080"> 2.309</span> │ <span style="color: #008080; text-decoration-color: #008080">0.8361</span> │ <span style="color: #008080; text-decoration-color: #008080">   1</span> │ <span style="color: #008080; text-decoration-color: #008080">    2</span> │ <span style="color: #008080; text-decoration-color: #008080">    3</span> │ <span style="color: #008080; text-decoration-color: #008080">    3</span> │ <span style="color: #008080; text-decoration-color: #008080">    3</span> │ <span style="color: #008000; text-decoration-color: #008000">▃  ▃ ▇</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Age         </span> │ <span style="color: #008080; text-decoration-color: #008080"> 177</span> │ <span style="color: #008080; text-decoration-color: #008080">19.865319865319865</span> │ <span style="color: #008080; text-decoration-color: #008080">  29.7</span> │ <span style="color: #008080; text-decoration-color: #008080"> 14.53</span> │ <span style="color: #008080; text-decoration-color: #008080">0.42</span> │ <span style="color: #008080; text-decoration-color: #008080">20.12</span> │ <span style="color: #008080; text-decoration-color: #008080">   28</span> │ <span style="color: #008080; text-decoration-color: #008080">   38</span> │ <span style="color: #008080; text-decoration-color: #008080">   80</span> │ <span style="color: #008000; text-decoration-color: #008000">▂▇▇▃▁ </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">SibSp       </span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">                 0</span> │ <span style="color: #008080; text-decoration-color: #008080"> 0.523</span> │ <span style="color: #008080; text-decoration-color: #008080"> 1.103</span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">    0</span> │ <span style="color: #008080; text-decoration-color: #008080">    0</span> │ <span style="color: #008080; text-decoration-color: #008080">    1</span> │ <span style="color: #008080; text-decoration-color: #008080">    8</span> │ <span style="color: #008000; text-decoration-color: #008000">  ▇   </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Parch       </span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">                 0</span> │ <span style="color: #008080; text-decoration-color: #008080">0.3816</span> │ <span style="color: #008080; text-decoration-color: #008080">0.8061</span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">    0</span> │ <span style="color: #008080; text-decoration-color: #008080">    0</span> │ <span style="color: #008080; text-decoration-color: #008080">    0</span> │ <span style="color: #008080; text-decoration-color: #008080">    6</span> │ <span style="color: #008000; text-decoration-color: #008000"> ▇▁▁  </span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Fare        </span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080">                 0</span> │ <span style="color: #008080; text-decoration-color: #008080">  32.2</span> │ <span style="color: #008080; text-decoration-color: #008080"> 49.69</span> │ <span style="color: #008080; text-decoration-color: #008080">   0</span> │ <span style="color: #008080; text-decoration-color: #008080"> 7.91</span> │ <span style="color: #008080; text-decoration-color: #008080">14.45</span> │ <span style="color: #008080; text-decoration-color: #008080">   31</span> │ <span style="color: #008080; text-decoration-color: #008080">512.3</span> │ <span style="color: #008000; text-decoration-color: #008000">  ▇   </span> │  │
+│ └──────────────┴──────┴────────────────────┴────────┴────────┴──────┴───────┴───────┴───────┴───────┴────────┘  │
+│ <span style="font-style: italic">                                                    string                                                    </span>  │
+│ ┏━━━━━━━━━━┳━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━┓  │
+│ ┃<span style="font-weight: bold">          </span>┃<span style="font-weight: bold">     </span>┃<span style="font-weight: bold">           </span>┃<span style="font-weight: bold">          </span>┃<span style="font-weight: bold">           </span>┃<span style="font-weight: bold">          </span>┃<span style="font-weight: bold">           </span>┃<span style="font-weight: bold"> chars    </span>┃<span style="font-weight: bold"> words per </span>┃<span style="font-weight: bold"> total    </span>┃  │
+│ ┃<span style="font-weight: bold"> column   </span>┃<span style="font-weight: bold"> NA  </span>┃<span style="font-weight: bold"> NA %      </span>┃<span style="font-weight: bold"> shortest </span>┃<span style="font-weight: bold"> longest   </span>┃<span style="font-weight: bold"> min      </span>┃<span style="font-weight: bold"> max       </span>┃<span style="font-weight: bold"> per row  </span>┃<span style="font-weight: bold"> row       </span>┃<span style="font-weight: bold"> words    </span>┃  │
+│ ┡━━━━━━━━━━╇━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━┩  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Name    </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">        0</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">Lam, Mr.</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">Penasco y</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">Abbing, </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">van      </span> │ <span style="color: #008080; text-decoration-color: #008080">      27</span> │ <span style="color: #008080; text-decoration-color: #008080">      4.1</span> │ <span style="color: #008080; text-decoration-color: #008080">    3626</span> │  │
+│ │          │     │           │ <span style="color: #af87ff; text-decoration-color: #af87ff">Ali     </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">Castellan</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">Mr.     </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">Melkebeke</span> │          │           │          │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">a, Mrs.  </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">Anthony </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">, Mr.    </span> │          │           │          │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">Victor de</span> │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">Philemon </span> │          │           │          │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">Satode   </span> │          │           │          │           │          │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">(Maria   </span> │          │           │          │           │          │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">Josefa   </span> │          │           │          │           │          │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">Perez de </span> │          │           │          │           │          │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">Soto y   </span> │          │           │          │           │          │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">Vallejo) </span> │          │           │          │           │          │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Sex     </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">        0</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">male    </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">female   </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">female  </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">male     </span> │ <span style="color: #008080; text-decoration-color: #008080">     4.7</span> │ <span style="color: #008080; text-decoration-color: #008080">        1</span> │ <span style="color: #008080; text-decoration-color: #008080">     891</span> │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Ticket  </span> │ <span style="color: #008080; text-decoration-color: #008080">  0</span> │ <span style="color: #008080; text-decoration-color: #008080">        0</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">693     </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">SOTON/O.Q</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">110152  </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">WE/P 5735</span> │ <span style="color: #008080; text-decoration-color: #008080">    6.75</span> │ <span style="color: #008080; text-decoration-color: #008080">      1.3</span> │ <span style="color: #008080; text-decoration-color: #008080">    1130</span> │  │
+│ │          │     │           │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">. 3101307</span> │          │           │          │           │          │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Cabin   </span> │ <span style="color: #008080; text-decoration-color: #008080">687</span> │ <span style="color: #008080; text-decoration-color: #008080">77.104377</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">D       </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">B57 B59  </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">A10     </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">T        </span> │ <span style="color: #008080; text-decoration-color: #008080">    3.59</span> │ <span style="color: #008080; text-decoration-color: #008080">     0.27</span> │ <span style="color: #008080; text-decoration-color: #008080">     238</span> │  │
+│ │          │     │ <span style="color: #008080; text-decoration-color: #008080"> 10437711</span> │          │ <span style="color: #af87ff; text-decoration-color: #af87ff">B63 B66  </span> │          │           │          │           │          │  │
+│ │ <span style="color: #af87ff; text-decoration-color: #af87ff">Embarked</span> │ <span style="color: #008080; text-decoration-color: #008080">  2</span> │ <span style="color: #008080; text-decoration-color: #008080">0.2244668</span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">S       </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">S        </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">C       </span> │ <span style="color: #af87ff; text-decoration-color: #af87ff">S        </span> │ <span style="color: #008080; text-decoration-color: #008080">       1</span> │ <span style="color: #008080; text-decoration-color: #008080">        1</span> │ <span style="color: #008080; text-decoration-color: #008080">     889</span> │  │
+│ │          │     │ <span style="color: #008080; text-decoration-color: #008080">911335578</span> │          │           │          │           │          │           │          │  │
+│ └──────────┴─────┴───────────┴──────────┴───────────┴──────────┴───────────┴──────────┴───────────┴──────────┘  │
+╰────────────────────────────────────────────────────── End ──────────────────────────────────────────────────────╯
+</pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 12 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   PassengerId  891 non-null    int64  
+ 1   Survived     891 non-null    int64  
+ 2   Pclass       891 non-null    int64  
+ 3   Name         891 non-null    object 
+ 4   Sex          891 non-null    object 
+ 5   Age          714 non-null    float64
+ 6   SibSp        891 non-null    int64  
+ 7   Parch        891 non-null    int64  
+ 8   Ticket       891 non-null    object 
+ 9   Fare         891 non-null    float64
+ 10  Cabin        204 non-null    object 
+ 11  Embarked     889 non-null    object 
+dtypes: float64(2), int64(5), object(5)
+memory usage: 83.7+ KB
+Sex
+male      577
+female    314
+Name: count, dtype: int64
+Embarked
+S    644
+C    168
+Q     77
+Name: count, dtype: int64
+Pclass
+1    0.629630
+2    0.472826
+3    0.242363
+Name: Survived, dtype: float64
+Sex
+female    0.742038
+male      0.188908
+Name: Survived, dtype: float64
+Cabin          77.104377
+Age            19.865320
+Embarked        0.224467
+PassengerId     0.000000
+Name            0.000000
+Pclass          0.000000
+Survived        0.000000
+Sex             0.000000
+Parch           0.000000
+SibSp           0.000000
+Fare            0.000000
+Ticket          0.000000
+dtype: float64</code></pre>
+</div>
+</div>
+</section>
+<section id="lecture4---employment-and-graduation-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="lecture4---employment-and-graduation-data-analysis">Lecture4 - Employment and Graduation Data Analysis</h2>
+<p>The following Python code demonstrates how to analyze employment and graduation data using grouping, sorting, and visualization techniques.</p>
+<div id="cc577b50" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the all-ages dataset</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'all-ages.csv'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Group by Major and sort by Unemployment rate (ascending)</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> df.groupby([<span class="st">"Major"</span>]).<span class="bu">sum</span>().sort_values([<span class="st">"Unemployment_rate"</span>])</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Unemployment rate sorted by Major:"</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the recent-grads dataset</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'recent-grads.csv'</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Group by Major and sort by Share of Women (descending)</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> df.groupby([<span class="st">"Major"</span>]).<span class="bu">sum</span>().sort_values([<span class="st">"ShareWomen"</span>], ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Share of Women sorted by Major:"</span>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize median salary by major category</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>median_salary_by_category <span class="op">=</span> df[<span class="st">'Median'</span>].groupby(df[<span class="st">'Major_category'</span>]).<span class="bu">sum</span>()</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>median_salary_by_category.plot.bar()</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Median Salary by Major Category'</span>)</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Major Category'</span>)</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Median Salary'</span>)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     Major_code                                            Major  \
+0          1100                              GENERAL AGRICULTURE   
+1          1101            AGRICULTURE PRODUCTION AND MANAGEMENT   
+2          1102                           AGRICULTURAL ECONOMICS   
+3          1103                                  ANIMAL SCIENCES   
+4          1104                                     FOOD SCIENCE   
+..          ...                                              ...   
+168        6211                           HOSPITALITY MANAGEMENT   
+169        6212    MANAGEMENT INFORMATION SYSTEMS AND STATISTICS   
+170        6299  MISCELLANEOUS BUSINESS &amp; MEDICAL ADMINISTRATION   
+171        6402                                          HISTORY   
+172        6403                            UNITED STATES HISTORY   
+
+                      Major_category   Total  Employed  \
+0    Agriculture &amp; Natural Resources  128148     90245   
+1    Agriculture &amp; Natural Resources   95326     76865   
+2    Agriculture &amp; Natural Resources   33955     26321   
+3    Agriculture &amp; Natural Resources  103549     81177   
+4    Agriculture &amp; Natural Resources   24280     17281   
+..                               ...     ...       ...   
+168                         Business  200854    163393   
+169                         Business  156673    134478   
+170                         Business  102753     77471   
+171        Humanities &amp; Liberal Arts  712509    478416   
+172        Humanities &amp; Liberal Arts   17746     11887   
+
+     Employed_full_time_year_round  Unemployed  Unemployment_rate  Median  \
+0                            74078        2423           0.026147   50000   
+1                            64240        2266           0.028636   54000   
+2                            22810         821           0.030248   63000   
+3                            64937        3619           0.042679   46000   
+4                            12722         894           0.049188   62000   
+..                             ...         ...                ...     ...   
+168                         122499        8862           0.051447   49000   
+169                         118249        6186           0.043977   72000   
+170                          61603        4308           0.052679   53000   
+171                         354163       33725           0.065851   50000   
+172                           8204         943           0.073500   50000   
+
+     P25th     P75th  
+0    34000   80000.0  
+1    36000   80000.0  
+2    40000   98000.0  
+3    30000   72000.0  
+4    38500   90000.0  
+..     ...       ...  
+168  33000   70000.0  
+169  50000  100000.0  
+170  36000   83000.0  
+171  35000   80000.0  
+172  39000   81000.0  
+
+[173 rows x 11 columns]
+Unemployment rate sorted by Major:
+                                            Major_code  \
+Major                                                    
+EDUCATIONAL ADMINISTRATION AND SUPERVISION        2301   
+GEOLOGICAL AND GEOPHYSICAL ENGINEERING            2411   
+PHARMACOLOGY                                      3607   
+MATERIALS SCIENCE                                 5008   
+MATHEMATICS AND COMPUTER SCIENCE                  4005   
+...                                                ...   
+LIBRARY SCIENCE                                   3501   
+SCHOOL STUDENT COUNSELING                         2303   
+MILITARY TECHNOLOGIES                             3801   
+CLINICAL PSYCHOLOGY                               5202   
+MISCELLANEOUS FINE ARTS                           6099   
+
+                                                                 Major_category  \
+Major                                                                             
+EDUCATIONAL ADMINISTRATION AND SUPERVISION                            Education   
+GEOLOGICAL AND GEOPHYSICAL ENGINEERING                              Engineering   
+PHARMACOLOGY                                             Biology &amp; Life Science   
+MATERIALS SCIENCE                                                   Engineering   
+MATHEMATICS AND COMPUTER SCIENCE                        Computers &amp; Mathematics   
+...                                                                         ...   
+LIBRARY SCIENCE                                                       Education   
+SCHOOL STUDENT COUNSELING                                             Education   
+MILITARY TECHNOLOGIES                       Industrial Arts &amp; Consumer Services   
+CLINICAL PSYCHOLOGY                                    Psychology &amp; Social Work   
+MISCELLANEOUS FINE ARTS                                                    Arts   
+
+                                            Total  Employed  \
+Major                                                         
+EDUCATIONAL ADMINISTRATION AND SUPERVISION   4037      3113   
+GEOLOGICAL AND GEOPHYSICAL ENGINEERING       6264      4120   
+PHARMACOLOGY                                 5015      3481   
+MATERIALS SCIENCE                            7208      5866   
+MATHEMATICS AND COMPUTER SCIENCE             7184      5874   
+...                                           ...       ...   
+LIBRARY SCIENCE                             16193      7091   
+SCHOOL STUDENT COUNSELING                    2396      1492   
+MILITARY TECHNOLOGIES                        4315      1650   
+CLINICAL PSYCHOLOGY                          7638      5128   
+MISCELLANEOUS FINE ARTS                      8511      6431   
+
+                                            Employed_full_time_year_round  \
+Major                                                                       
+EDUCATIONAL ADMINISTRATION AND SUPERVISION                           2468   
+GEOLOGICAL AND GEOPHYSICAL ENGINEERING                               3350   
+PHARMACOLOGY                                                         2579   
+MATERIALS SCIENCE                                                    4505   
+MATHEMATICS AND COMPUTER SCIENCE                                     5039   
+...                                                                   ...   
+LIBRARY SCIENCE                                                      4330   
+SCHOOL STUDENT COUNSELING                                            1093   
+MILITARY TECHNOLOGIES                                                1708   
+CLINICAL PSYCHOLOGY                                                  3297   
+MISCELLANEOUS FINE ARTS                                              3802   
+
+                                            Unemployed  Unemployment_rate  \
+Major                                                                       
+EDUCATIONAL ADMINISTRATION AND SUPERVISION           0           0.000000   
+GEOLOGICAL AND GEOPHYSICAL ENGINEERING               0           0.000000   
+PHARMACOLOGY                                        57           0.016111   
+MATERIALS SCIENCE                                  134           0.022333   
+MATHEMATICS AND COMPUTER SCIENCE                   150           0.024900   
+...                                                ...                ...   
+LIBRARY SCIENCE                                    743           0.094843   
+SCHOOL STUDENT COUNSELING                          169           0.101746   
+MILITARY TECHNOLOGIES                              187           0.101796   
+CLINICAL PSYCHOLOGY                                587           0.102712   
+MISCELLANEOUS FINE ARTS                           1190           0.156147   
+
+                                            Median  P25th     P75th  
+Major                                                                
+EDUCATIONAL ADMINISTRATION AND SUPERVISION   58000  44750   79000.0  
+GEOLOGICAL AND GEOPHYSICAL ENGINEERING       85000  55000  125000.0  
+PHARMACOLOGY                                 60000  35000  105000.0  
+MATERIALS SCIENCE                            75000  60000  100000.0  
+MATHEMATICS AND COMPUTER SCIENCE             92000  53000  136000.0  
+...                                            ...    ...       ...  
+LIBRARY SCIENCE                              40000  30000   55000.0  
+SCHOOL STUDENT COUNSELING                    41000  33200   50000.0  
+MILITARY TECHNOLOGIES                        64000  39750   90000.0  
+CLINICAL PSYCHOLOGY                          45000  26100   62000.0  
+MISCELLANEOUS FINE ARTS                      45000  30000   60000.0  
+
+[173 rows x 10 columns]
+     Rank  Major_code                                      Major    Total  \
+0       1        2419                      PETROLEUM ENGINEERING   2339.0   
+1       2        2416             MINING AND MINERAL ENGINEERING    756.0   
+2       3        2415                  METALLURGICAL ENGINEERING    856.0   
+3       4        2417  NAVAL ARCHITECTURE AND MARINE ENGINEERING   1258.0   
+4       5        2405                       CHEMICAL ENGINEERING  32260.0   
+..    ...         ...                                        ...      ...   
+168   169        3609                                    ZOOLOGY   8409.0   
+169   170        5201                     EDUCATIONAL PSYCHOLOGY   2854.0   
+170   171        5202                        CLINICAL PSYCHOLOGY   2838.0   
+171   172        5203                      COUNSELING PSYCHOLOGY   4626.0   
+172   173        3501                            LIBRARY SCIENCE   1098.0   
+
+         Men    Women            Major_category  ShareWomen  Sample_size  \
+0     2057.0    282.0               Engineering    0.120564           36   
+1      679.0     77.0               Engineering    0.101852            7   
+2      725.0    131.0               Engineering    0.153037            3   
+3     1123.0    135.0               Engineering    0.107313           16   
+4    21239.0  11021.0               Engineering    0.341631          289   
+..       ...      ...                       ...         ...          ...   
+168   3050.0   5359.0    Biology &amp; Life Science    0.637293           47   
+169    522.0   2332.0  Psychology &amp; Social Work    0.817099            7   
+170    568.0   2270.0  Psychology &amp; Social Work    0.799859           13   
+171    931.0   3695.0  Psychology &amp; Social Work    0.798746           21   
+172    134.0    964.0                 Education    0.877960            2   
+
+     Employed  ...  Part_time  Full_time_year_round  Unemployed  \
+0        1976  ...        270                  1207          37   
+1         640  ...        170                   388          85   
+2         648  ...        133                   340          16   
+3         758  ...        150                   692          40   
+4       25694  ...       5180                 16697        1672   
+..        ...  ...        ...                   ...         ...   
+168      6259  ...       2190                  3602         304   
+169      2125  ...        572                  1211         148   
+170      2101  ...        648                  1293         368   
+171      3777  ...        965                  2738         214   
+172       742  ...        237                   410          87   
+
+     Unemployment_rate  Median  P25th   P75th  College_jobs  Non_college_jobs  \
+0             0.018381  110000  95000  125000          1534               364   
+1             0.117241   75000  55000   90000           350               257   
+2             0.024096   73000  50000  105000           456               176   
+3             0.050125   70000  43000   80000           529               102   
+4             0.061098   65000  50000   75000         18314              4440   
+..                 ...     ...    ...     ...           ...               ...   
+168           0.046320   26000  20000   39000          2771              2947   
+169           0.065112   25000  24000   34000          1488               615   
+170           0.149048   25000  25000   40000           986               870   
+171           0.053621   23400  19200   26000          2403              1245   
+172           0.104946   22000  20000   22000           288               338   
+
+     Low_wage_jobs  
+0              193  
+1               50  
+2                0  
+3                0  
+4              972  
+..             ...  
+168            743  
+169             82  
+170            622  
+171            308  
+172            192  
+
+[173 rows x 21 columns]
+Share of Women sorted by Major:
+                                               Rank  Major_code     Total  \
+Major                                                                       
+EARLY CHILDHOOD EDUCATION                       165        2307   37589.0   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES   164        6102   38279.0   
+MEDICAL ASSISTING SERVICES                       52        6104   11123.0   
+ELEMENTARY EDUCATION                            139        2304  170862.0   
+FAMILY AND CONSUMER SCIENCES                    151        2901   58001.0   
+...                                             ...         ...       ...   
+MINING AND MINERAL ENGINEERING                    2        2416     756.0   
+CONSTRUCTION SERVICES                            27        5601   18498.0   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES      67        2504    4790.0   
+FOOD SCIENCE                                     22        1104       0.0   
+MILITARY TECHNOLOGIES                            74        3801     124.0   
+
+                                                   Men     Women  \
+Major                                                              
+EARLY CHILDHOOD EDUCATION                       1167.0   36422.0   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES   1225.0   37054.0   
+MEDICAL ASSISTING SERVICES                       803.0   10320.0   
+ELEMENTARY EDUCATION                           13029.0  157833.0   
+FAMILY AND CONSUMER SCIENCES                    5166.0   52835.0   
+...                                                ...       ...   
+MINING AND MINERAL ENGINEERING                   679.0      77.0   
+CONSTRUCTION SERVICES                          16820.0    1678.0   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES     4419.0     371.0   
+FOOD SCIENCE                                       0.0       0.0   
+MILITARY TECHNOLOGIES                            124.0       0.0   
+
+                                                                    Major_category  \
+Major                                                                                
+EARLY CHILDHOOD EDUCATION                                                Education   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES                               Health   
+MEDICAL ASSISTING SERVICES                                                  Health   
+ELEMENTARY EDUCATION                                                     Education   
+FAMILY AND CONSUMER SCIENCES                   Industrial Arts &amp; Consumer Services   
+...                                                                            ...   
+MINING AND MINERAL ENGINEERING                                         Engineering   
+CONSTRUCTION SERVICES                          Industrial Arts &amp; Consumer Services   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES                            Engineering   
+FOOD SCIENCE                                       Agriculture &amp; Natural Resources   
+MILITARY TECHNOLOGIES                          Industrial Arts &amp; Consumer Services   
+
+                                               ShareWomen  Sample_size  \
+Major                                                                    
+EARLY CHILDHOOD EDUCATION                        0.968954          342   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES    0.967998           95   
+MEDICAL ASSISTING SERVICES                       0.927807           67   
+ELEMENTARY EDUCATION                             0.923745         1629   
+FAMILY AND CONSUMER SCIENCES                     0.910933          518   
+...                                                   ...          ...   
+MINING AND MINERAL ENGINEERING                   0.101852            7   
+CONSTRUCTION SERVICES                            0.090713          295   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES      0.077453           71   
+FOOD SCIENCE                                     0.000000           36   
+MILITARY TECHNOLOGIES                            0.000000            4   
+
+                                               Employed  Full_time  Part_time  \
+Major                                                                           
+EARLY CHILDHOOD EDUCATION                         32551      27569       7001   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES     29763      19975      13862   
+MEDICAL ASSISTING SERVICES                         9168       5643       4107   
+ELEMENTARY EDUCATION                             149339     123177      37965   
+FAMILY AND CONSUMER SCIENCES                      46624      36747      15872   
+...                                                 ...        ...        ...   
+MINING AND MINERAL ENGINEERING                      640        556        170   
+CONSTRUCTION SERVICES                             16318      15690       1751   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES        4186       4175        247   
+FOOD SCIENCE                                       3149       2558       1121   
+MILITARY TECHNOLOGIES                                 0        111          0   
+
+                                               Full_time_year_round  \
+Major                                                                 
+EARLY CHILDHOOD EDUCATION                                     20748   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES                 14460   
+MEDICAL ASSISTING SERVICES                                     4290   
+ELEMENTARY EDUCATION                                          86540   
+FAMILY AND CONSUMER SCIENCES                                  26906   
+...                                                             ...   
+MINING AND MINERAL ENGINEERING                                  388   
+CONSTRUCTION SERVICES                                         12313   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES                    3607   
+FOOD SCIENCE                                                   1735   
+MILITARY TECHNOLOGIES                                           111   
+
+                                               Unemployed  Unemployment_rate  \
+Major                                                                          
+EARLY CHILDHOOD EDUCATION                            1360           0.040105   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES        1487           0.047584   
+MEDICAL ASSISTING SERVICES                            407           0.042507   
+ELEMENTARY EDUCATION                                 7297           0.046586   
+FAMILY AND CONSUMER SCIENCES                         3355           0.067128   
+...                                                   ...                ...   
+MINING AND MINERAL ENGINEERING                         85           0.117241   
+CONSTRUCTION SERVICES                                1042           0.060023   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES           250           0.056357   
+FOOD SCIENCE                                          338           0.096931   
+MILITARY TECHNOLOGIES                                   0           0.000000   
+
+                                               Median  P25th  P75th  \
+Major                                                                 
+EARLY CHILDHOOD EDUCATION                       28000  21000  35000   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES   28000  20000  40000   
+MEDICAL ASSISTING SERVICES                      42000  30000  65000   
+ELEMENTARY EDUCATION                            32000  23400  38000   
+FAMILY AND CONSUMER SCIENCES                    30000  22900  40000   
+...                                               ...    ...    ...   
+MINING AND MINERAL ENGINEERING                  75000  55000  90000   
+CONSTRUCTION SERVICES                           50000  36000  60000   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES     40000  27000  52000   
+FOOD SCIENCE                                    53000  32000  70000   
+MILITARY TECHNOLOGIES                           40000  40000  40000   
+
+                                               College_jobs  Non_college_jobs  \
+Major                                                                           
+EARLY CHILDHOOD EDUCATION                             23515              7705   
+COMMUNICATION DISORDERS SCIENCES AND SERVICES         19957              9404   
+MEDICAL ASSISTING SERVICES                             2091              6948   
+ELEMENTARY EDUCATION                                 108085             36972   
+FAMILY AND CONSUMER SCIENCES                          20985             20133   
+...                                                     ...               ...   
+MINING AND MINERAL ENGINEERING                          350               257   
+CONSTRUCTION SERVICES                                  3275              5351   
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES            1861              2121   
+FOOD SCIENCE                                           1183              1274   
+MILITARY TECHNOLOGIES                                     0                 0   
+
+                                               Low_wage_jobs  
+Major                                                         
+EARLY CHILDHOOD EDUCATION                               2868  
+COMMUNICATION DISORDERS SCIENCES AND SERVICES           5125  
+MEDICAL ASSISTING SERVICES                              1270  
+ELEMENTARY EDUCATION                                   11502  
+FAMILY AND CONSUMER SCIENCES                            5248  
+...                                                      ...  
+MINING AND MINERAL ENGINEERING                            50  
+CONSTRUCTION SERVICES                                    703  
+MECHANICAL ENGINEERING RELATED TECHNOLOGIES              406  
+FOOD SCIENCE                                             485  
+MILITARY TECHNOLOGIES                                      0  
+
+[173 rows x 20 columns]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Lecture234_files/figure-html/cell-4-output-2.png" width="589" height="677" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
